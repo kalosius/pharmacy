@@ -1,47 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static%}
+{% extends 'products/base.html'%} {% block content%}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../dawa/static/css/main.css">
+<br></br>
 
-  <title>Accessing Elements in the DOM</title>
+<div class = "container">
+  <h1 class= "text-center">ITEMS IN STOCK</h1>
+  <br>
 
-  <style>
-    html { font-family: sans-serif; color: #333; }
-    body { max-width: 500px; margin: 0 auto; padding: 0 15px; }
-    div, article { padding: 10px; margin: 5px; border: 1px solid #dedede; }
-  </style>
+  <div class = "container">
+    <form action = "" method = "GET">
+      {{product_filters.form}}
+      <input 
+      type = "submit"
+      value = "Search Products"
+      class="btn btn-secondary btn"/>
+    </form>
+  </div>
 
-</head>
-
-<body>
-
-  <h1>Accessing Elements in the DOM</h1>
-
-  <h2>ID (#demo)</h2>
-  <div id="demo">Access me by ID</div>
-
-  <h2>Class (.demo)</h2>
-  <div class="demo">Access me by class (1)</div>
-  <div class="demo">Access me by class (2)</div>
-
-  <h2>Tag (article)</h2>
-  <article>Access me by tag (1)</article>
-  <article>Access me by tag (2)</article>
-
-  <h2>Query Selector</h2>
-  <div id="demo-query">Access me by query</div>
-
-  <h2>Query Selector All</h2>
-  <div class="demo-query-all">Access me by query all (1)</div>
-  <div class="demo-query-all">Access me by query all (2)</div>
-
-</body>
-<script src="{% static 'js/access.js' %}">
-
-  </script>
-
-</html>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Category</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Price(UGX)</th>
+        <th scope = "col">Detail</th>
+      </tr>
+    </thead>
+    {% for product in products%}
+    <tbody>
+      <tr>    
+        <td>{{product.category_name}}</td>
+        <td>{{product.item_names}}</td>
+        <td>{{product.total_quantity}}</td>
+        <td>UGX{{product.unit_price}}</td>
+        <td><a href=""
+              ><input
+                type="submit"
+                value="BUY ITEM"
+                class="btn btn-secondary btn"
+                type="button"
+            /></a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+{% endblock%}
