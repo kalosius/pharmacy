@@ -3,7 +3,8 @@
 <br></br>
 
 <div class = "container">
-  <h1 class= "text-center">ITEMS IN STOCK</h1>
+  <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+  Geneva, Verdana, sans-serif; color: rgb(74, 78, 80);" class= "text-center" >ITEMS IN STOCK</h1>
   <br>
 
   <div class = "container">
@@ -16,7 +17,7 @@
     </form>
   </div>
 
-  <br>
+  <br style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -29,7 +30,7 @@
     </thead>
     {% for product in products%}
     <tbody>
-      <tr>    
+      <tr style="font-size: 20px; font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">    
         <td>{{product.category_name}}</td>
         <td>{{product.item_names}}</td>
         <td>{{product.total_quantity}}</td>

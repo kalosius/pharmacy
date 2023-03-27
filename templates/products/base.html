@@ -18,21 +18,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark "> 
-        <a class="nav-link" href=""><h1 class="navbar-brand" style = "font-size: 25px">DR. WHO</h1></a>
+        <a class="nav-link" href=""><h1 class="navbar-brand" style = "font-size: 25px; font-family: 'Lucida Sans', '
+        Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+         Geneva, Verdana, sans-serif;">DR.WuHaYu</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" id="navbarNav">
           <ul class="nav navbar-nav ml-auto">
            {% if user.is_authenticated%}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                <a class="nav-link" href="{% url 'home' %}">SERVICES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home'%}">RECEIPTS</a>
+                <a class="nav-link" href="{% url 'home'%}">RECEITS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home'%}">ALL SALES</a>
+                <a class="nav-link" href="{% url 'home'%}">SALES</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout'%}">LOGOUT</a>
