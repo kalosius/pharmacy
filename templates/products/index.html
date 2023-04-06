@@ -1,15 +1,13 @@
 {% extends 'products/base.html'%} {% block content%}
-
 <br></br>
 
 <div class = "container">
-  <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
-  Geneva, Verdana, sans-serif; color: rgb(74, 78, 80);" class= "text-center" >ITEMS IN STOCK</h1>
+  <h1 class= "text-center">ITEMS IN STOCK</h1>
   <br>
 
   <div class = "container">
     <form action = "" method = "GET">
-      {{product_filters.form}}
+      {{product_filter.form}}
       <input 
       type = "submit"
       value = "Search Products"
@@ -17,7 +15,7 @@
     </form>
   </div>
 
-  <br style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+  <br>
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -28,17 +26,24 @@
         <th scope = "col">Detail</th>
       </tr>
     </thead>
-    {% for product in products%}
+    {% for product in products %}
     <tbody>
-      <tr style="font-size: 20px; font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">    
+      <tr>    
         <td>{{product.category_name}}</td>
-        <td>{{product.item_names}}</td>
+        <td>{{product.item_name}}</td>
         <td>{{product.total_quantity}}</td>
         <td>UGX{{product.unit_price}}</td>
-        <td><a href=""
+        <td><a href="{% url 'product_detail' product.id %}"
               ><input
                 type="submit"
                 value="BUY ITEM"
+                class="btn btn-secondary btn"
+                type="button"
+            /></a></td>
+            <td><a href="{% url 'delete_item' product.id %}"
+              ><input
+                type="submit"
+                value="DELETE ITEM"
                 class="btn btn-secondary btn"
                 type="button"
             /></a></td>

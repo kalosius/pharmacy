@@ -1,7 +1,7 @@
 html,body {
     position: relative;
     overflow-x: hidden;
-    background:  url('../images/prescription-drug-costs-1132261468_1x.avif');
+    background:  url('../images/img4.jpg');
     width: 100% !important;
     height: 100vh;
     display: table;
@@ -13,10 +13,11 @@ html,body {
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
   
 body{
-      background-color: hsl(0, 0%, 98%);
+      background-color: hsl(182, 100%, 95%);
       font-family: 'raleway';
  }
     
@@ -27,7 +28,7 @@ form {
 }
 
 .navbar {
-    background-color: #2d3dcf;
+    background-color: #0bb5ad;
 }
 
 .navbar li a {
