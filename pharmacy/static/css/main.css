@@ -30,14 +30,18 @@ form {
 .navbar {
     /* background-color: #30a6f5; */
     background-color: hsl(182, 100%, 95%);
+    
 }
 
 .navbar li a {
     font-size: 20px;
+    color: rgb(39, 82, 82) !important;
 }
 
 .navbar-brand {
     font-size: 30px !important;
+    color: rgb(39, 82, 82) !important;
+    
 }
 
 @media(max-width: 767px){
