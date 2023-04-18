@@ -15,6 +15,8 @@ urlpatterns =[
     path('all_sales/', views.all_sales, name='all_sales' ),
     path('reciept/<int:reciept_id>', views.reciept_detail, name = 'reciept_detail'),
     path('delete/<int:product_id>', views.delete_item, name = 'delete_item'),
+    path('services', views.services, name='services')
+    
 
 ]
 # views match request to templates

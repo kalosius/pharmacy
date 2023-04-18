@@ -1,0 +1,110 @@
+{% extends 'products/base.html'%}
+{% load static %}
+{% block content%}
+
+<br></br>
+
+<style>
+  .d1{
+    color: rgb(110, 100, 87);
+  }
+  #h1{
+    color: rgba(21, 119, 231, 0.815);
+    padding-left: 30px;
+  }
+</style>
+
+<body>
+    
+<h1 id="h1">Pharmacy services</h1>
+<p style="font-size: 20px; padding-left: 30px; color: rgb(53, 1, 63); font-family: 'Franklin Gothic Medium', 
+'Arial Narrow',Arial, sans-serif ">The ageing of the population, technological advances, 
+    new public health threats, evolving patients expectations <br> and shrinking
+    budget are putting under pressure health care systems in Europe and beyond.
+    An increasing portion of health care expenditure  is on pharmaceutical and chronic diseases.<br>
+    All these factors are pushing for change. And community pharmacy is changing too to respond
+    to these challenges and meet <br> patients’ needs by shifting the focus from dispensing
+    medicines and diseases to patient care and quality of services.<br>
+    Pharmacy services aim to achieve the ‘triple aim’: 
+</p>
+<div class="d1" style="font-size: 20px; padding-left: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif">
+  <li> Better quality of care</li>
+  <li> Better health outcome</li>
+  <li> Lower costs</li>
+</div>
+
+<p style="font-size: 20px; padding-left: 30px; color: rgb(53, 1, 63); font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif"> If we look at the main trends in pharmacy services we observe
+    that the number of patient-centered services is increasing.
+</p>
+
+<h2 style="font-size: 20px; padding-left: 30px; color: rgb(53, 1, 63); font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif">
+  Core <a style="color: rgb(53, 33, 33);" href="index.html">pharmacy</a> services are:</h2> 
+<div class="d1" style="font-size: 20px; padding-left: 30px;">
+  <li> Dispensing (incl. repeat dispensing and homecare);</li> 
+  <li> Compounding;</li>
+  <li> Emergency care (incl. emergency contraception) and minor ailment management.</li>
+  <li> Medication management (unit dose packaging, new medicines service, medicines use review);</li>
+</div>
+
+<p style="font-size: 20px; padding-left: 30px; color: rgb(53, 1, 63); font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif">Over the past decade we are also seeing an increase number of advanced pharmaceutical 
+    care services offered to patients, such as :
+</p>
+<div class="d1" style="font-size: 20px; padding-left: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif">
+  <li> <a style="color: rgb(53, 33, 33);" href="https://www.who.int/health-topics/vaccines-and-immunization#tab=tab_1">
+  Vaccination;</a> </li>
+  <li> Smoking cessation;</li>
+  <li> Measurement of blood pressure, cholesterol, glucose, weight,</li>
+  <li> Chronic disease management;</li>
+  <li> Early screening and testing.</li>
+
+  <h2>Other services offered:</h2>
+  <div>
+    <li>Drug prescriptiob</li>
+    <li>Consultation</li>
+    <li>Councelling</li>
+    <li>Drugs sold in whole-sale and retail-sale</li>
+
+  </div>
+
+</div>
+
+<img src="Dr1.jpg" alt="image.png">
+
+
+<!-- 
+<nav id="navdown"  class="navbar navbar-expand-lg navbar-dark " > 
+    <a class="nav-link" href="index.html"><h1 class="navbar-brand" style = "font-size: 25px">About</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+       {% if user.is_authenticated%}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'reciept'%}">RECEIPTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'all_sales'%}">ALL SALES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'services'%}">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">LOGOUT</a>
+          </li>
+        {% endif %}
+      </ul>
+ </nav> -->
+
+
+</body>
+
+{% endblock%}

@@ -2,13 +2,15 @@
 <br></br>
 
 <div class = "container">
-  <h1 class= "text-center">ITEMS IN STOCK</h1>
+  <h1 style="font-weight: bolder; font-family: 'Franklin Gothic Medium',
+   'Arial Narrow', Arial, sans-serif;" class= "text-center">ITEMS IN STOCK</h1>
   <br>
 
-  <div class = "container">
+  <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+   Arial, sans-serif;" class = "container">
     <form action = "" method = "GET">
-      {{product_filter.form}}
-      <input 
+      {{product_filter.form }} 
+      <input style="border-radius: 50px; color: blue;"
       type = "submit"
       value = "Search Products"
       class="btn btn-secondary btn"/>
@@ -16,7 +18,8 @@
   </div>
 
   <br>
-  <table class="table">
+  <table  style="font-weight: bolder; font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+  Arial, sans-serif" class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Category</th>
@@ -28,7 +31,7 @@
     </thead>
     {% for product in products %}
     <tbody>
-      <tr>    
+      <tr style="color: rgb(39, 82, 82);">    
         <td>{{product.category_name}}</td>
         <td>{{product.item_name}}</td>
         <td>{{product.total_quantity}}</td>
@@ -39,6 +42,8 @@
                 value="BUY ITEM"
                 class="btn btn-secondary btn"
                 type="button"
+                style="color: rgb(13, 192, 192);"
+
             /></a></td>
             <td><a href="{% url 'delete_item' product.id %}"
               ><input
@@ -46,6 +51,7 @@
                 value="DELETE ITEM"
                 class="btn btn-secondary btn"
                 type="button"
+                style="color: rgb(13, 192, 192)"
             /></a></td>
       </tr>
     </tbody>

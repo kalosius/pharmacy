@@ -109,3 +109,7 @@ def delete_item(request, product_id):
     delete = Product.objects.get(id = product_id)
     delete.delete()
     return HttpResponseRedirect(reverse('index'))
+
+@login_required
+def services(request):
+    return render(request, 'products/services.html')

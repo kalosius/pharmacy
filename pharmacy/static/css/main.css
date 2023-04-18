@@ -1,7 +1,7 @@
 html,body {
     position: relative;
     overflow-x: hidden;
-    background:  url('../images/img4.jpg');
+    /* background:  url('../images/newimg.png'); */
     width: 100% !important;
     height: 100vh;
     display: table;
@@ -18,7 +18,7 @@ html,body {
   
 body{
       background-color: hsl(182, 100%, 95%);
-      font-family: 'raleway';
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
     
 
@@ -28,7 +28,8 @@ form {
 }
 
 .navbar {
-    background-color: #0bb5ad;
+    /* background-color: #30a6f5; */
+    background-color: hsl(182, 100%, 95%);
 }
 
 .navbar li a {
@@ -43,4 +44,8 @@ form {
     form { 
         width: 90%;
     }
+}
+
+#navdown{
+    color: black !important;
 }
